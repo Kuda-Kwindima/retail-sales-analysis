@@ -69,18 +69,19 @@ Conditional logic using CASE
 Time-based analysis
 Business-oriented KPI calculations
 
-📁 Project Structure
+## 📁 Project Structure
 
 retail-sales-analysis/
 │
-├── sql/
-│   ├── 01_data_cleaning.sql
-│   ├── 02_eda.sql
-│
 ├── data/
-│   └── retail_sales.csv
+│   └── retail_sales.csv        # Raw dataset
 │
-└── README.md
+├── sql/
+│   ├── 01_data_cleaning.sql    # Data cleaning & preparation
+│   └── 02_eda.sql              # Exploratory data analysis (EDA)
+│
+└── README.md                   # Project documentation
+
 
 🚀 Next Steps
 Visualize insights using Python (pandas & matplotlib)
@@ -89,5 +90,4 @@ Optimize queries with indexing for performance
 
 👤 Author
 Kudakwashe A. Kwindima
-Aspiring Data Scientist
-Career transition from accounting into data science 
+Aspiring Data Scientist 
