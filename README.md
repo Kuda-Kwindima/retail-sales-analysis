@@ -5,6 +5,10 @@ This project analyzes retail sales transactions to uncover key business insights
 
 The dataset is synthetic but designed to closely reflect real-world retail scenarios, making it suitable for demonstrating practical SQL skills.
 
+🎯 Project Objective
+
+The objective of this project is to analyze retail sales data using SQL to uncover trends in revenue, customer behavior, and product performance. The insights generated aim to support data-driven decision-making related to pricing strategy, inventory planning, and customer segmentation.
+
 🧰 Tools & Technologies
 MySQL (data cleaning, transformations, EDA)
 MySQL Workbench
@@ -23,6 +27,21 @@ price_per_unit
 total_amount
 
 Each row represents a single purchase transaction.
+
+
+## 📁 Project Structure
+
+retail-sales-analysis/
+│
+├── data/
+│   └── retail_sales.csv        # Raw dataset
+│
+├── sql/
+│   ├── 01_data_cleaning.sql    # Data cleaning & preparation
+│   └── 02_eda.sql              # Exploratory data analysis (EDA)
+│
+└── README.md                   # Project documentation
+
 
 🧹 Data Cleaning & Preparation
 
@@ -69,19 +88,22 @@ Conditional logic using CASE
 Time-based analysis
 Business-oriented KPI calculations
 
-## 📁 Project Structure
+## 🧠 Interview-Style Questions & Answers
 
-retail-sales-analysis/
-│
-├── data/
-│   └── retail_sales.csv        # Raw dataset
-│
-├── sql/
-│   ├── 01_data_cleaning.sql    # Data cleaning & preparation
-│   └── 02_eda.sql              # Exploratory data analysis (EDA)
-│
-└── README.md                   # Project documentation
+### Q1. How did you analyze revenue trends over time?
+I grouped transactions by month using DATE_FORMAT and calculated total revenue per month. I then applied a window function (LAG) to compute month-over-month revenue changes, allowing me to identify growth patterns and seasonality.
 
+### Q2. How did you identify top-performing product categories?
+I aggregated total revenue by product category and calculated each category’s percentage contribution to overall revenue using a window function. This highlighted which categories generated the largest share of sales.
+
+### Q3. How did you segment customers based on spending?
+I used aggregate functions to calculate customer-level spend and applied CASE statements to classify customers into low, medium, and high-value segments.
+
+### Q4. What SQL concepts were most critical in this project?
+Window functions, subqueries, aggregations, conditional logic (CASE), and date transformations were essential for performing time-based and business-oriented analysis.
+
+### Q5. How would this analysis help a business?
+The insights support decisions around inventory optimization, targeted marketing, pricing strategies, and identifying high-value customers.
 
 🚀 Next Steps
 Visualize insights using Python (pandas & matplotlib)
